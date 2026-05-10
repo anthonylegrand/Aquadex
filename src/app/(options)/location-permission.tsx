@@ -1,18 +1,17 @@
 import { useRouter } from "expo-router";
-import { StyleSheet, Text, TouchableOpacity } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function LocationPermission() {
   const router = useRouter();
 
   return (
-    <SafeAreaView edges={["top", "bottom"]} style={{ flex: 1 }}>
+    <View style={{ flex: 1 }}>
       <Text style={styles.title}>Prochainement</Text>
 
       <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
         <Text style={styles.backButtonText}>← Retour</Text>
       </TouchableOpacity>
-    </SafeAreaView>
+    </View>
   );
 }
 
